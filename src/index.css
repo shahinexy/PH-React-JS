@@ -12,7 +12,28 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+/* =================================
+        my style 
+================================= */
+.student{
+  background: tomato;
+  color: chartreuse;
+  padding: 15px;
+  margin: 15px;
+}
+.stdetails{
+  border: 2px solid purple;
+  border-radius: 10px;
+  margin: 10px;
+  padding: 10px;
+}
 
+
+
+
+
+
+/* ========== end my style ============= */
 a {
   font-weight: 500;
   color: #646cff;
