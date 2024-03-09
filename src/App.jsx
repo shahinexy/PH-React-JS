@@ -1,8 +1,19 @@
 import "./App.css";
 // import List
 import List from "./list";
+import Friends from "./Friend";
+import FriendsRoll from "./Friendroll";
 
 function App() {
+  // for loop throw 
+  const friendsName = ['Rifat', 'Shifat', 'Emon', 'Khalil', 'Shimanto']
+  const friensdRollArray = [
+    {name: 'Shahin', roll: '01'},
+    {name: 'Shifat', roll: '02'},
+    {name: 'Kholil', roll: '03'},
+
+  ]
+
   return (
     <>
       <h1>Vite + React</h1>
@@ -20,12 +31,21 @@ function App() {
       <ExamDetails stclass="6" stroll="01"></ExamDetails>
       <ExamDetails></ExamDetails>
 
-      {/* imported component  */}
+      {/* ================= imported component ==================== */}
       <List task="HTML" isDone={true}></List>
       <List task="CSS" isDone={true}></List>
       <List task="JavaScript" isDone={true}></List>
       <List task="React JS" isDone={false}></List>
       <List task="Angular" isDone={false}></List>
+
+    {/* ============== loop throw the array in jsx ==================== */}
+      {
+        friendsName.map(friend => <Friends friendName={friend}></Friends>)
+      }
+
+      {
+        friensdRollArray.map(friend => <FriendsRoll names={friend}></FriendsRoll>)
+      }
     </>
   );
 }
