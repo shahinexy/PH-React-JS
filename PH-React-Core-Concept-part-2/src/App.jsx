@@ -1,4 +1,5 @@
 import './App.css'
+import Counter from './Counter'
 
 function App() {
   const HandelClick = ()=>{
@@ -16,6 +17,9 @@ function App() {
       <button onClick={HandelClick}>Click Me</button>
       <button onClick={()=>{alert('Click Me 2')}}>Click Me 2</button>
       <button onClick={()=>{HendelCilck2(5)}}>Cilck Me 3</button>
+
+      {/* use state  */}
+      <Counter></Counter>
     </>
   )
 }
