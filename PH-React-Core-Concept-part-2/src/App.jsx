@@ -1,5 +1,6 @@
 import './App.css'
 import Counter from './Counter'
+import User from './Users';
 
 function App() {
   const HandelClick = ()=>{
@@ -20,6 +21,9 @@ function App() {
 
       {/* use state  */}
       <Counter></Counter>
+
+      {/* use effect  */}
+      <User></User>
     </>
   )
 }
