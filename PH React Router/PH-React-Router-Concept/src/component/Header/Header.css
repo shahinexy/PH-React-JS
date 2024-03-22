@@ -1,0 +1,10 @@
+nav a {
+    margin-right: 20px;
+    padding: 5px;
+}
+
+nav a.active{
+    color: rgb(56, 189, 26);
+    text-decoration: underline; 
+    border: 1px solid greenyellow;
+}
