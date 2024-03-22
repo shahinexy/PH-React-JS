@@ -1,9 +1,10 @@
 import { useState } from "react";
 
 const MyFrom = () => {
-  const [name, setName] = useState(null);
+  const [name, setName] = useState('shahin');
   const [email, setEmail] = useState(null);
   const [password, setPassword] = useState(null);
+  const [error, setError] = useState();
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -11,9 +12,15 @@ const MyFrom = () => {
     // console.log(e.target.email.value);
     // console.log(e.target.phone.value);
 
-    console.log(name);
-    console.log(email);
-    console.log(password);
+    if(password.length < 6){
+      setError('Password must be 6 cheracter or longer')
+    }
+    else{
+      setError('')
+      console.log(name);
+      console.log(email);
+      console.log(password);
+    }
   };
 
   const handleName = (e) => {
@@ -30,18 +37,23 @@ const MyFrom = () => {
     <div>
       <h2>My simple form</h2>
       <form onSubmit={handleSubmit}>
-        <input onChange={handleName} type="text" name="name" id="" />
+        <input value={name} onChange={handleName} type="text" name="name" id="" />
         <br />
-        <input onChange={handleEmail} type="email" name="email" id="" />
+        <input onChange={handleEmail} type="email" name="email" id="" required />
         <br />
         <input
           onChange={handlePassword}
           type="password"
           name="password"
           id=""
+          required
         />
         <br />
         <input type="submit" value="Submit" />
+
+        {
+          error && <p>{error}</p>
+        }
       </form>
     </div>
   );
